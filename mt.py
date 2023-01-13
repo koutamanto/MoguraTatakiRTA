@@ -51,8 +51,9 @@ def clock_loop():
         clock.place(x=root.winfo_width()/2)
         score_history.place(x=floor(root.winfo_width()*(5/6)))
         if clock_time % 10 == 0:
-            history = str(clicks) + "回"  + "\n" + history
-            score_history["text"] = history
+            if clicks != 0:
+                history = str(clicks) + "回"  + "\n" + history
+                score_history["text"] = history
             clicks = 0
             clock["text"] = str(clock_time) + "秒経過\n" + str(clicks) + "回"
 Thread(target=clock_loop).start()
