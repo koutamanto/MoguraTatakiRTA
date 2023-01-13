@@ -20,7 +20,7 @@ def respawn():
     clock["text"] = str(clock_time) + "秒経過\n" + str(clicks) + "回"
 
     btn.destroy()
-    # photo = PhotoImage(file="/Users/kjunkie/Downloads/mogura.png")
+    # photo = PhotoImage(file="mogura.png")
     # photo.subsample(10)
     # photo.subsample(300, 300)
 
@@ -30,7 +30,7 @@ root = Tk()
 
 frm = ttk.Frame(root, padding=10, width=1600, height=900)
 frm.grid()
-photo = PhotoImage(file="/Users/kjunkie/Downloads/mogura.png")
+photo = PhotoImage(file="mogura.png")
 # photo.subsample(10, 10)
 photo = photo.subsample(5)
 btn = ttk.Button(frm, command=respawn, image=photo, width=0)
